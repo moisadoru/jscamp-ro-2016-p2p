@@ -2,7 +2,7 @@
 
 James Halliday
 
-https://substack/neocities.org
+https://substack.neocities.org
 
 ---
 # the promise of the internet
