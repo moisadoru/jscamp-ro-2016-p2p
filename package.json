@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "calendar-db": "^1.2.0",
+    "collect-stream": "^1.1.1",
+    "hyperkv": "^1.7.0",
+    "hyperlog": "^4.10.0",
+    "hyperlog-calendar-index": "^1.0.0",
+    "hyperlog-kdb-index": "^3.0.1",
+    "level": "^1.4.0",
+    "level-browserify": "^1.1.0",
+    "osm-p2p": "^1.2.3",
+    "parse-messy-schedule": "^2.0.3",
+    "parse-messy-time": "^2.0.2",
+    "yo-yo": "^1.2.0"
+  }
+}
