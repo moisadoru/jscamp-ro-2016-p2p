@@ -13,8 +13,7 @@ var argv = minimist(process.argv.slice(2), {
 var log = hyperlog(level(argv.datadir + '/log.db'), { valueEncoding: 'json' })
 var cal = cali({
   db: level(argv.datadir + '/cali.db'),
-  log: log,
-  map: function (row) { return row.value }
+  log: log
 })
 
 if (argv._[0] === 'add') {

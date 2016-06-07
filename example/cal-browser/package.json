@@ -2,5 +2,9 @@
   "scripts": {
     "build": "browserify main.js -o public/bundle.js",
     "watch": "watchify main.js -o public/bundle.js -dv"
+  },
+  "dependencies": {
+    "hyperlog-calendar-index": "^1.1.1",
+    "websocket-stream": "^3.1.0"
   }
 }
