@@ -1,5 +1,9 @@
 # p2p!
 
+James Halliday
+
+https://substack/neocities.org
+
 ---
 # the promise of the internet
 
@@ -19,7 +23,7 @@ we fetch the exact same data over and over and over again
 ---
 # the cloud
 
-over people's computers
+other people's computers
 
 ---
 # computers
@@ -97,7 +101,7 @@ make the web great again
 * don't fetch the same data over and over again
 
 ---
-# p2p: de terra nemo
+# p2p: terra nemo
 
 build internet services that nobody can own
 
@@ -275,6 +279,19 @@ $ dupsh PROGRAM1 PROGRAM2
 
 Pipe PROGRAM1's stdout to PROGRAM2's stdin
 and pipe PROGRAM2's stdout to PROGRAM1's stdin
+
+---
+# p2p calendar
+
+we will ALSO need:
+
+* `wsnc` - like netcat but for websockets
+
+```
+$ npm install -g wsnc
+$ wsnc -l 5000 # listen on port 5000
+$ wsnc ws://localhost:5000 # connect to a server
+```
 
 ---
 # p2p calendar
