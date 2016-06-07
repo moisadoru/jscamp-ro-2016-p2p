@@ -15,8 +15,6 @@ if (process.argv[2] === 'create') {
       console.log(pt)
     })
   })
-} else if (process.argv[2] === 'sync') {
-  process.stdin.pipe(osm.log.replicate()).pipe(process.stdout)
 }
 
 function csplit (x) { return x.split(',').map(Number) }

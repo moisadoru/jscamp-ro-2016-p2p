@@ -51,6 +51,7 @@ so that you can download the file from dropbox's servers.
 # even worse
 
 What if we are both in Romania,
+
 why do we send our files to California?
 
 ---
@@ -131,6 +132,7 @@ the better it works for everyone
 
 * hyperlog
 * webtorrent
+* ipfs
 * hyper{core,drive}
 
 ---
@@ -162,15 +164,16 @@ DEMO!
 
 the log is the source of truth
 
-indexes (materialized views) create derived truths from the log
+indexes (materialized views) create derived truths
+from the log
 
 ---
 # kappa architecture
 
 more benefits:
 
-instead of migrations, you can delete and regenerate your indexes
-when your derived data requirements change
+instead of migrations, you can delete and regenerate
+your indexes when your derived data requirements change
 
 literally:
 
@@ -205,7 +208,8 @@ hyperkv: materialized view for key/value data
 multi-value register conflict strategy:
 
 * get() produces 0 or more values, not a single value
-* put() with multiple links to "merge" multiple keys into a single key again
+* put() with multiple links to "merge" multiple keys
+  into a single key again
 
 hyperkv uses hyperlog-index
 
@@ -248,6 +252,11 @@ data can flow through a p2p system in all kinds of ways:
 * tcp
 
 ---
+# p2p map
+
+DEMO app
+
+---
 # p2p calendar
 
 we will need:
@@ -263,7 +272,8 @@ we will need:
 
 * a schedule parser (parse-messy-schedule)
 * a calendar database (calendar-db)
-* a hyperlog index for the calendar database (hyperlog-calendar-db)
+* a hyperlog index for the calendar database
+  (hyperlog-calendar-db)
 
 ---
 # p2p calendar
@@ -307,9 +317,11 @@ DEMO p2p calendar in the browser
 # calendar architecture overview
 
 * write calendar documents to an append-only log
-* calendar database generated from the log (materialized view)
+* calendar database generated from the log
+  (materialized view)
 * answer queries from the calendar database
 * replicate by concatenating logs
 
 ---
 
+EOF
