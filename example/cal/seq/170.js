@@ -1,21 +1,4 @@
-var level = require('level')
-var cali = require('hyperlog-calendar-index')
-var hyperlog = require('hyperlog')
-var through = require('through2')
-var strftime = require('strftime')
-var schedule = require('parse-messy-schedule')
-
-var minimist = require('minimist')
-var argv = minimist(process.argv.slice(2), {
-  alias: { t: 'title', d: 'datadir' }
-})
-
-var log = hyperlog(level(argv.datadir + '/log.db'), { valueEncoding: 'json' })
-var cal = cali({
-  db: level(argv.datadir + '/cali.db'),
-  log: log,
-  map: function (row) { return row.value }
-})
+// ...
 
 if (argv._[0] === 'add') {
   log.append({
@@ -36,4 +19,5 @@ if (argv._[0] === 'add') {
       + '# ' + strftime('%F %T', row.time) + '\n'
       + row.value.title + '\n\n')
   })).pipe(process.stdout)
+  // ^^^ format output
 }
